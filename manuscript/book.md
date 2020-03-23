@@ -2111,14 +2111,14 @@ const rows = [
     product1: <ProductOptions options={product1.colors} />,
     product2: <ProductOptions options={product2.colors} />,
     isVisible: (product1, product2) =>
-      (product1.colors.length > 0 || product2.colors.length) > 0
+      product1.colors.length + product2.colors.length > 0
   },
   {
     row: 'Sizes',
     product1: <ProductOptions options={product1.sizes} />,
     product2: <ProductOptions options={product2.sizes} />,
     isVisible: (product1, product2) =>
-      (product1.sizes.length > 0 || product2.sizes.length) > 0
+      product1.sizes.length + product2.sizes.length > 0
   }
 ];
 
